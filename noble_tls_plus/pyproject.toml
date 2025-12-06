@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "noble-tls-plus"
+version = "0.1.0"
+description = "An advanced HTTP library built upon noble-tls, providing robust proxy management and retry mechanisms with continued asynchronous support."
+authors = ["Arshan <arshan@arshan.dev>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+noble_tls = "^0.1.0"
+loguru = "^0.7.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

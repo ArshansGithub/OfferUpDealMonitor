@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "offerupmonitor"
+version = "0.1.0"
+description = ""
+authors = ["Arshan <arshan@arshan.dev>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pgeocode = "^0.5.0"
+noble-tls-plus = {path = "noble_tls_plus"}
+motor = "^3.6.0"
+py-cord = "^2.6.1"
+py-mon = "^2.0.5"
+matplotlib = "^3.10.1"
+openai = "^1.74.0"
+python-dotenv = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

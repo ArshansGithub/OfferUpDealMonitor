@@ -1,0 +1,53 @@
+# noble_tls_plus
+
+`noble_tls_client` is an advanced HTTP library built upon [rawandahmad698/noble-tls](https://github.com/rawandahmad698/noble-tls), providing robust proxy management and retry mechanisms with continued asynchronous support.
+
+> [!WARNING]
+> This project is intended for educational purposes only. The authors are not responsible for any misuse of the software. Users are solely responsible for ensuring their use complies with applicable laws and terms of service of the websites involved.
+
+## Features
+
+- **Asynchronous Support:** Fully async, leveraging Python's `asyncio` for non-blocking operations.
+- **Proxy Support:** Easily rotate proxies to distribute requests and avoid ratelimiting.
+- **Customizable TLS Settings:** Same as [noble-tls](https://github.com/rawandahmad698/noble-tls)
+- **Retry Mechanism:** Implements exponential backoff for handling transport failures.
+- **Logging:** Enhanced logging capabilities using `loguru` for better monitoring and debugging.
+
+## Installation
+
+```bash
+pip install noble_tls_plus
+```
+## Usage
+```python
+import asyncio
+from noble_tls_plus import NobleTLSClient, MaxRetriesExceeded
+from noble_tls import Client
+
+async def main():
+    # Initialize the client with desired configurations
+    client = NobleTLSClient(
+        proxies=["http://user:password@proxy1.example.com:8080", "http://user:password@proxy2.example.com:8080"],
+        client_identifier=Client.CHROME_120,
+        random_tls_extension_order=True,
+        max_retries=3,
+        backoff_base=0.5,
+        backoff_factor=2.0,
+        max_backoff=60.0,
+    )
+
+    try:
+        response = await client.get("https://www.example.com/")
+        print(response.text)
+    except MaxRetriesExceeded as e:
+        print(str(e))
+    finally:
+        await client.close()
+
+asyncio.run(main())
+
+```
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 

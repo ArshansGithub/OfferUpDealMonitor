@@ -1,0 +1,123 @@
+{
+    "global": {
+        "PRICE_MIN": 0,
+        "PRICE_MAX": 0,
+        "CONDITION": [
+            "NEW",
+            "OPEN_BOX",
+            "REFURBISHED",
+            "USED",
+            "BROKEN",
+            "OTHER"
+        ],
+        "DISTANCE": [
+            "5",
+            "10",
+            "20",
+            "30",
+            "50"
+        ],
+        "DELIVERY_FLAGS": [
+            "s",
+            "p"
+        ]
+    },
+    "vehicle": {
+        "VEH_DRIVETRAIN": [
+            "a",
+            "r",
+            "f"
+        ],
+        "VEH_MAKE": [
+            "ab",
+            "ac",
+            "ad",
+            "aj",
+            "an",
+            "ap",
+            "bb",
+            "bf",
+            "bi",
+            "bj",
+            "c",
+            "cc",
+            "cd",
+            "d",
+            "dc",
+            "de",
+            "dh",
+            "e",
+            "fb",
+            "fc",
+            "fd",
+            "fe",
+            "ga",
+            "ge",
+            "hb",
+            "he",
+            "hf",
+            "i",
+            "ic",
+            "j",
+            "jb",
+            "k",
+            "lb",
+            "ld",
+            "lf",
+            "lg",
+            "lh",
+            "mb",
+            "me",
+            "mf",
+            "mh",
+            "mi",
+            "mk",
+            "ml",
+            "n",
+            "o",
+            "pe",
+            "pf",
+            "pg",
+            "r",
+            "re",
+            "s",
+            "sb",
+            "sc",
+            "sh",
+            "sl",
+            "sn",
+            "tc",
+            "td",
+            "vb",
+            "vc"
+        ],
+        "VEH_MILEAGE": [
+            "25000",
+            "50000",
+            "75000",
+            "100000",
+            "125000",
+            "150000",
+            "175000",
+            "200000"
+        ],
+        "VEH_MPG": [
+            "10",
+            "20",
+            "30",
+            "40"
+        ],
+        "VEH_STYLE": [
+            "s",
+            "t",
+            "v",
+            "c"
+        ],
+        "VEH_TRANSMISSION": [
+            "m",
+            "a"
+        ],
+        "VEH_YEAR_MAX": 0,
+        "VEH_YEAR_MIN": 0
+    }
+}

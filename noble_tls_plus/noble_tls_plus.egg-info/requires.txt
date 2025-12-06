@@ -1,0 +1,2 @@
+noble_tls>=0.0.107
+loguru>=0.7.3

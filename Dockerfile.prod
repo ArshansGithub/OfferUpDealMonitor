@@ -1,0 +1,18 @@
+FROM python:3.11-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    POETRY_VERSION=1.6.1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=on
+
+RUN pip install poetry
+
+WORKDIR /app
+
+COPY . /app
+
+RUN poetry config virtualenvs.create false
+RUN poetry lock
+RUN poetry install --no-interaction
+
+CMD ["poetry", "run", "python3", "-m", "offerupmonitor"]
